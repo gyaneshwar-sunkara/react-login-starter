@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://noface:B3jT8uXdnjH6zEKq@cluster0.0xedp.mongodb.net/react-login-starter?retryWrites=true&w=majority",
+    "mongoURI": "mongodb://localhost/react-login-starter",
     "jwtSecret": "jl24rj#J@#LJf)F(euLJfj24240j)(Urjf094@ddd23df__"
 }

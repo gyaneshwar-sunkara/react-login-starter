@@ -26,8 +26,8 @@ export default class Header extends Component {
       <div>
         <Navbar color="dark" dark expand="sm" className="mb-5">
           <Container>
-            <NavbarToggler onClick={this.toggle} />
             <NavbarBrand href="/">React login Starter</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem className="mr-5 mb-3 mt-3">

@@ -40,43 +40,45 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App container-sm mt-5">
+        <div className="App">
           <Header />
-          <Switch>
-            <Route
-              exact
-              path="/"
-              render={(props) => (
-                <Login auth={this.state.auth} readUser={this.readUser} />
-              )}
-            />
-            <Route
-              path="/register"
-              render={(props) => (
-                <Register auth={this.state.auth} readUser={this.readUser} />
-              )}
-            />
+          <div className="container-sm mt-5">
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={(props) => (
+                  <Login auth={this.state.auth} readUser={this.readUser} />
+                )}
+              />
+              <Route
+                path="/register"
+                render={(props) => (
+                  <Register auth={this.state.auth} readUser={this.readUser} />
+                )}
+              />
 
-            <Route
-              path="/update"
-              render={(props) => (
-                <Update
-                  user={this.state}
-                  updateUser={this.updateUser}
-                  deleteUser={this.deleteUser}
-                />
-              )}
-            />
-            <Route
-              path="/delete"
-              render={(props) => (
-                <Delete user={this.state} deleteUser={this.deleteUser} />
-              )}
-            />
+              <Route
+                path="/update"
+                render={(props) => (
+                  <Update
+                    user={this.state}
+                    updateUser={this.updateUser}
+                    deleteUser={this.deleteUser}
+                  />
+                )}
+              />
+              <Route
+                path="/delete"
+                render={(props) => (
+                  <Delete user={this.state} deleteUser={this.deleteUser} />
+                )}
+              />
 
-            <Route path="/about" component={About} />
-            <Route component={GenericNotFound} />
-          </Switch>
+              <Route path="/about" component={About} />
+              <Route component={GenericNotFound} />
+            </Switch>
+          </div>
         </div>
       </Router>
     );
